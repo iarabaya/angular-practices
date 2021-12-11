@@ -1,10 +1,6 @@
 import { Component } from '@angular/core';
-
-
-interface Personaje {
-  nombre: string;
-  poder: number;
-}
+import { Personaje } from '../interfaces/dbz.interface';
+import { DbzService } from '../services/dbz.service';
 
 @Component({
   selector: 'app-main-page',
@@ -12,38 +8,31 @@ interface Personaje {
 })
 export class MainPageComponent {
 
-  personajes: Personaje [] = [
-    {
-      nombre: 'Goku',
-      poder: 15000
-    },
-    {
-      nombre: 'Vegeta',
-      poder: 8500
-    }
-  ]
+//  personajes: Personaje[] = [];
+
   nuevo: Personaje = {
-    nombre: '',
-    poder: 0
+    nombre: 'Maestro Roshi',
+    poder: 2000
   }
 
-  // cambiarNombre( event: any){
-  //   console.log(event.target.value);
+  // get personajes(): Personaje[]{
+  //  return this.dbzService.personajes
   // }
-  
-  agregar(  ){
-    if(this.nuevo.nombre.trim().length === 0){ return; }
-    console.log(this.nuevo);
 
-    this.personajes.push( this.nuevo );
-    this.nuevo ={
-      nombre: '',
-      poder: 0
-    }
-  }
 
-  // agregar( event: Event ){
-  //   event.preventDefault()
-  //   console.log('hey')
+  // agregarNuevoPersonaje( arg : Personaje ){
+  //   console.log(arg);
+  //   this.personajes.push(arg);
   // }
+
+  constructor(private dbzService : DbzService){ 
+    // this.personajes = this.dbzService.personajes;
+   }
 }
+
+//TAREA ADICIONAL (hecho)
+//Nuevo componente agregar
+//tiene el h3 hasta el cierre del form 
+//mover nuevo: personaje y agregar
+//@input personajes
+//@input nuevo (desde el componente padre)
