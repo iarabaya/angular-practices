@@ -12,6 +12,8 @@ import { ProgressComponent } from './progress/progress.component';
 import { PagesComponent } from './pages.component';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
 import { ChartsComponent } from './charts/charts.component';
+import { PromisesComponent } from './promises/promises.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
 
 
 
@@ -21,7 +23,9 @@ import { ChartsComponent } from './charts/charts.component';
     ProgressComponent,
     ChartsComponent,
     PagesComponent,
-    AccountSettingsComponent
+    AccountSettingsComponent,
+    PromisesComponent,
+    RxjsComponent
   ],
   imports: [
     CommonModule,
@@ -35,7 +39,9 @@ import { ChartsComponent } from './charts/charts.component';
     ProgressComponent,
     ChartsComponent,
     PagesComponent,
-    AccountSettingsComponent
+    AccountSettingsComponent,
+    PromisesComponent,
+    RxjsComponent
   ]
 })
 export class PagesModule { }

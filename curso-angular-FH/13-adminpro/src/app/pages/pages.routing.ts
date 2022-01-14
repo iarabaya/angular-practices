@@ -5,6 +5,8 @@ import { DashboardComponent } from "./dashboard/dashboard.component";
 import { ProgressComponent } from "./progress/progress.component";
 import { AccountSettingsComponent } from "./account-settings/account-settings.component";
 import { ChartsComponent } from "./charts/charts.component";
+import { PromisesComponent } from "./promises/promises.component";
+import { RxjsComponent } from "./rxjs/rxjs.component";
 
 const routes: Routes = [
     {
@@ -14,6 +16,8 @@ const routes: Routes = [
           { path: '', component: DashboardComponent },
           { path: 'progress', component: ProgressComponent },
           { path: 'charts', component: ChartsComponent },
+          { path: 'promises', component: PromisesComponent},
+          { path: 'rxjs', component: RxjsComponent},
           { path: 'account-settings', component: AccountSettingsComponent },
         //   { path: '', redirectTo:'/dashboard', pathMatch:'full' },
         ]
