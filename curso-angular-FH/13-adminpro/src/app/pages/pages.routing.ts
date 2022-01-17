@@ -13,15 +13,15 @@ const routes: Routes = [
         path: 'dashboard', 
         component: PagesComponent,
         children:[
-          { path: '', component: DashboardComponent },
-          { path: 'progress', component: ProgressComponent },
-          { path: 'charts', component: ChartsComponent },
-          { path: 'promises', component: PromisesComponent},
-          { path: 'rxjs', component: RxjsComponent},
-          { path: 'account-settings', component: AccountSettingsComponent },
-        //   { path: '', redirectTo:'/dashboard', pathMatch:'full' },
+          { path: '', component: DashboardComponent, data: { title: 'Dashboard'}  },
+          { path: 'progress', component: ProgressComponent, data:{ title: 'Progress Bar'}  },
+          { path: 'charts', component: ChartsComponent, data:{ title: 'Charts'}  },
+          { path: 'promises', component: PromisesComponent, data:{ title: 'Promises'}  },
+          { path: 'rxjs', component: RxjsComponent, data:{ title: 'RxJs and Observables'}  },
+          { path: 'account-settings', component: AccountSettingsComponent, data:{ title: 'Account Settings'}  },
+        //   { path: '', redirectTo:'/dashboard', pathMatch:'full'},
         ]
-      },
+      }
 ];
 
 @NgModule({
